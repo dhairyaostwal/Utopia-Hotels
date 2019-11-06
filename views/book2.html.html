@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Utopia Book Now</title>
+<style>
+ #heading
+ {
+  font-family:milea;
+  position:absolute;
+  top:50px;
+  left:200px;
+  font-size:55px;
+  color:#05e3a8;
+ }
+
+ #subh
+ {
+   font-family: monospace;
+   color: #21b3db;
+   position: absolute;
+   top:150px;
+   left:200px;
+   font-size:40px;
+ }
+ .parallax {
+    background-image: url("./assets/plx.jpg");
+    min-height: 950px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#formpt
+{
+position: absolute;
+top:450px;
+left:500px;
+flex-wrap: wrap;
+background-color:#80ffaa;
+    opacity:0.8;
+    padding:20px;
+}
+
+td
+{
+font-family: monospace;
+}
+
+.pad{
+padding:30px;
+font-size:20px;
+font-weight:bolder;
+color:#290038;
+}
+#c1{
+width:100px;
+}
+.optn1{
+position:absolute;
+top:250px;
+left:70px;
+width:1220px;
+display:flex;
+flex-wrap:wrap;
+}
+.row1{
+flex-wrap:wrap;
+display:flex;
+}
+.col1{
+flex-wrap:wrap;
+padding:20px;
+
+position: absolute;
+left:-62px;
+width:1100px;
+height:120px;
+background-color:#80ffaa;
+opacity:0.6;
+}
+
+#c1{
+position:absolute;
+left:150px;
+
+width:150px; /* was 70 */
+opacity:1;
+}
+
+#c2{
+position:absolute;
+left:350px;
+width:70px;
+opacity:1;  /* was 70 */
+}
+
+#c3
+{
+position:absolute;
+left:550px;
+width:150px;  /* was 70 */
+opacity:1;
+}
+#c4{
+position:absolute;
+left:750px;
+width:150px; /* was 70 */
+opacity: 1;
+}
+
+#c5
+{
+  position: absolute;
+  left: 900px;
+  width:150px;
+  opacity: 1;
+}
+
+#c6
+{
+  position: absolute;
+  width:150px;
+}
+#svn{
+  position:absolute;
+  top:250px;
+  left:30px;
+  font-family: milea;
+  color: #e1ff00;
+  font-size:30px;
+  opacity: 1.4;
+  width:100%;
+  padding:10px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<script src="./form.js">
+</script>
+</head>
+
+<body>
+
+<img src="./assets/egesdshr.png" align="left" alt="utopia logo" width="200px">
+<h1 id="heading"> Utopia Hotels </h1>
+<h3 id="subh"> Paradise.. Just a Click Away! </h3>
+<div class=parallax>
+
+  <div class="optn1">
+<div class="row1">
+<div class="col1">
+<form name='signup' onSubmit="return formValidation();" class="bkng">
+  <div id="c1">
+  <div class="pad">
+
+
+  <label>Check-in Date:</label>
+  <input type="date" placeholder="Check-in Date" name="CID">
+
+  </div>
+  </div>
+  <div id="c2">
+  <div class="pad">
+
+  <label>Check-out Date</label>
+  <input type="date" name="COD" placeholder="Check-out date">
+
+  </div></div>
+  <div id="c3">
+  <div class="pad">
+
+  <label>Rooms</label>
+  <select name="R" class="form-control">
+  <option value="">Suite</option>
+  <option value="">Family Room</option>
+  <option value="">Deluxe Room</option>
+  <option value="">Classic Room</option>
+  <option value="">Superior Room</option>
+  <option value="">Luxury Room</option>
+  </select>
+
+  </div></div>
+  <div id="c4">
+  <div class="pad">
+
+  <label>Guests</label>
+  <select class="form-control">
+  <option value="">1 Adult</option>
+  <option value="">2 Adult</option>
+  <option value="">3 Adult</option>
+  <option value="">4 Adult</option>
+  <option value="">5 Adult</option>
+  <option value="">6 Adult</option>
+  </select>
+
+
+  </div></div>
+
+  <div id="c5">
+    <div class="pad">
+      <label> Location </label>
+      <select class="form-control">
+        <option value=""> Beverly Hills,USA </option>
+        <option value=""> Santorini, Greece.</option>
+        <option value=""> Bora Bora </option>
+        <option value=""> Alps </option>
+        <option value=""> California</option>
+        <option value=""> Bali, Indonesia</option>
+        <option value=""> Beijing </option>
+      </select>
+    </div>
+  </div>
+</div></div></div>
+<div class=parallax>
+<div id="formpt" ng-app="">
+
+<h1 style="text-align:center">Enter your details here:</h1>
+<br>
+
+
+<table align="center">
+
+
+<tr>
+<td><label>Name:</label></td> <td><input type="text" ng-model="firstname" name="username"></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr>
+<td><label>Email:</label></td> <td><input type="text" name="email"></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr>
+<td> <label> Mobile: </label></td> <td> <input type="text" name="mobile"> </td>
+</tr>
+<tr> <td> </td> </tr>
+<tr> <td> </td> </tr>
+<tr><td colspan="2" align="center">  <input type="submit" name="submit" value="Book" onclick="formValidation();"> </td></tr></table>
+
+</form>
+
+<div id="svn">
+  <h1>Hello {{firstname}}!</h1>
+   <p><span style="width:40px;"></span>Thank you for booking! An amazing journey awaits you! </span></p>
+</div></div>
+
+</div><!-- for parallax-->
+
+</body>
+
+</html>
