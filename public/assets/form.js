@@ -1,4 +1,3 @@
-// Form validation Code
 
 function formValidation()
 {
