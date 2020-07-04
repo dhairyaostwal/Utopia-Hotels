@@ -1,3 +1,5 @@
+// Form validation Code
+
 function formValidation()
 {
 var name=document.signup.username.value;
